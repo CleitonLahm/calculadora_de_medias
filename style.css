@@ -97,9 +97,9 @@ table td img{
   background-color: red;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 460px) {
   header h1{
-    font-size: 32px;
+    font-size: 28px;
   }
   form {
     flex-direction: column;
@@ -109,25 +109,12 @@ table td img{
     margin-bottom: 16px;
   }
   .titulo-th{
-    font-size: 20px;
-  }
-  .titulo-media-final{
-    font-size: 20px;
-  }
-}
-
-@media screen and (max-width: 430px){
-  header h1{
-    font-size: 26px;
-  }
-  .titulo-th{
     font-size: 16px;
   }
-  .titulo-media-final{
-    font-size: 16px;
-  }
-
   .media-final-valor{
+    font-size: 16px;
+  }
+  .titulo-media-final{
     font-size: 16px;
   }
   .media-final-resultdo{
