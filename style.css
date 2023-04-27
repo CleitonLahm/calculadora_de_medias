@@ -83,7 +83,6 @@ table td{
 table td img{
   height: 30px;
 }
-
 .resultado{
   padding: 8px;
   font-weight: bold;
@@ -91,11 +90,47 @@ table td img{
   background-color: #000;
   border-radius: 3px;
 }
-
 .aprovado {
   background-color: #009432;
 }
-
 .reprovado {
   background-color: red;
+}
+
+@media screen and (max-width: 500px) {
+  header h1{
+    font-size: 32px;
+  }
+  form {
+    flex-direction: column;
+    width: 100%;
+  }
+  form input {
+    margin-bottom: 16px;
+  }
+  .titulo-th{
+    font-size: 20px;
+  }
+  .titulo-media-final{
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 430px){
+  header h1{
+    font-size: 26px;
+  }
+  .titulo-th{
+    font-size: 16px;
+  }
+  .titulo-media-final{
+    font-size: 16px;
+  }
+
+  .media-final-valor{
+    font-size: 16px;
+  }
+  .media-final-resultdo{
+    font-size: 16px;
+  }
 }
