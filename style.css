@@ -36,7 +36,7 @@ header .info{
   bottom: 70%;
   right: 11%;
   transform: translateX(-50%);
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.7);
   color: white;
   padding: 5px;
   border-radius: 5px;
@@ -151,5 +151,11 @@ table td img{
   }
   .media-final-resultdo{
     font-size: 16px;
+  }
+
+  .tooltip{
+    position: absolute;
+    bottom: 120%;
+    left:60%;
   }
 }
