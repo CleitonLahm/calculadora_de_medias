@@ -18,12 +18,40 @@ header{
   display: flex;
   align-items: center;
   margin-bottom: 40px;
+  position: relative;
 }
 
-header img{
+header .logo{
   width: 36px;
   margin-right: 16px;
 }
+
+header .info{
+  width: 30px;
+  margin-left: 20px;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 70%;
+  right: 11%;
+  transform: translateX(-50%);
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 1.2;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+header:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
 
 header h1{
   font-size: 40px;

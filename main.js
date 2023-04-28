@@ -5,7 +5,18 @@ const atividades = [];
 const notas = [];
 const spanAprovado = "<span class='resultado aprovado'>Aprovado</span>";
 const spanReprovado = "<span class='resultado reprovado'>Reprovado</span>";
-const notaMinima = parseFloat(prompt("Digite a nota mínima para a aprovação:"));
+const imagemInfo = document.querySelector('.info');
+const tooltip = imagemContainer.querySelector('.tooltip');
+
+imagemInfo.addEventListener('mouseenter', () => {
+  tooltip.style.opacity = 1;
+  tooltip.style.visibility = 'visible';
+});
+
+imagemInfo.addEventListener('mouseleave', () => {
+  tooltip.style.opacity = 0;
+  tooltip.style.visibility = 'hidden';
+});
 
 let linhas = "";
 
@@ -30,7 +41,7 @@ function adicionaLinha() {
     let linha = "<tr>";
     linha += `<td>${inputNomeAtividade.value}</td>`;
     linha += `<td>${inputNotaAtividade.value}</td>`;
-    linha += `<td>${inputNotaAtividade.value >= notaMinima ? imgAprovado : imgReprovado}</td>`;
+    linha += `<td>${inputNotaAtividade.value >= 6 ? imgAprovado : imgReprovado}</td>`;
     linha += '</tr>';
   
     linhas += linha;
@@ -49,7 +60,7 @@ function atualizaMediaFinal() {
   const mediaFinal = calculaMediaFinal()
 
   document.querySelector("#media-final-valor").innerHTML = mediaFinal.toFixed(2);
-  document.querySelector("#media-final-resultado").innerHTML = mediaFinal >= notaMinima ? spanAprovado : spanReprovado;
+  document.querySelector("#media-final-resultado").innerHTML = mediaFinal >= 6 ? spanAprovado : spanReprovado;
 
 }
 
