@@ -6,7 +6,7 @@ const notas = [];
 const spanAprovado = "<span class='resultado aprovado'>Aprovado</span>";
 const spanReprovado = "<span class='resultado reprovado'>Reprovado</span>";
 const imagemInfo = document.querySelector('.info');
-const tooltip = imagemContainer.querySelector('.tooltip');
+const tooltip = imagemInfo.querySelector('.tooltip');
 
 imagemInfo.addEventListener('mouseenter', () => {
   tooltip.style.opacity = 1;
